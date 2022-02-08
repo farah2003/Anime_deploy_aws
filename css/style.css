@@ -57,10 +57,10 @@ body{
     text-align: center;
     justify-content: space-between;
 }
-#card{
+#anime-cards card{
     margin-bottom: 4vh;
 }
-#image{
+#anime-cards img{
 
  
     height: 40vh;
@@ -70,7 +70,7 @@ body{
     border-radius:6px;
     box-shadow: 0 0 9px 0#F0F3F4;
 }
-#title{
+#anime-cards title{
     font-weight: 600;
     
     
