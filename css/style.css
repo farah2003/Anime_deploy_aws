@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Syne+Tactile&display=swap');
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background-color: #ECF0F1 ;
+}
+#logo{
+    margin: 1vh 3vw;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.3rem;
+    color: #229954;
+}
+#search input{
+    padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-radius: 5px;
+
+  width: 30vw;
+
+}
+
+#search button {
+   
+   
+    padding: 10px;
+    background:#229954;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+   
+    border-radius: 5px;
+  }
+
+#header{
+    margin: 2vw 4vw;  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+#content{
+    margin:2vw 4vw;
+    
+}
+#cotentText{
+    margin-bottom: 1vh;
+}
+#anime-cards{
+  margin:1vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+}
+#card{
+    margin-bottom: 4vh;
+}
+#image{
+
+ 
+    height: 40vh;
+   
+   
+    border:2px solid #229954;
+    border-radius:6px;
+    box-shadow: 0 0 9px 0#F0F3F4;
+}
+#title{
+    font-weight: 600;
+    
+    
+}
