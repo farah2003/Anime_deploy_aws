@@ -50,28 +50,29 @@ body{
     margin-bottom: 1vh;
 }
 #anime-cards{
-  margin:1vw;
+ 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
-    justify-content: space-between;
+    justify-content: center;
+    
+ 
 }
 #anime-cards card{
     margin-bottom: 4vh;
+    margin-left: 15px;
 }
 #anime-cards img{
-
- 
-    height: 40vh;
-   
-   
+    width:12vw;
+    height: 40vh;  
     border:2px solid #229954;
     border-radius:6px;
     box-shadow: 0 0 9px 0#F0F3F4;
 }
-#anime-cards title{
+#anime-cards h2{
     font-weight: 600;
+    font-size: 1rem;
     
     
 }
@@ -80,10 +81,11 @@ body{
     #anime-cards{
       
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           flex-wrap: wrap;
           text-align: center;
           justify-content: center;
+
       }
       #header{
         margin: 3vw 4vw;  
