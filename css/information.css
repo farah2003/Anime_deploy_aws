@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Syne+Tactile&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #ecf0f1;
+}
+#logo {
+  margin: 1vh 3vw;
+  font-family: "Abril Fatface", cursive;
+  font-size: 1.3rem;
+  color: #229954;
+}
+#search input {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 30vw;
+}
+#search button {
+  padding: 10px;
+  background: #229954;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+#header {
+  margin: 2vw 4vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1.5px solid #229954;
+}
+.result {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img-video {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.result h2 {
+  margin-top: 40px;
+  font-family: "Abril Fatface", cursive;
+  color: #229954;
+}
+.img-video img {
+  width: 30%;
+}
+.img-video iframe {
+  width: 60%;
+}
+.facts {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 80%;
+}
+.facts p {
+  color: #229954;
+  margin-top: 10px;
+  width: 30%;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(211, 211, 211);
+  padding: 5px;
+  font-size: 18px;
+}
+.footer {
+  height: 50px;
+}
