@@ -1,4 +1,7 @@
 const anemiCards= document.querySelector("#anime-cards");
+const searchBtn=document.querySelector("btn");
+const searchInput=document.querySelector("#searchInput")
+let newArray=[];
 ////add cards
 const addCard=(object)=>{
 
@@ -16,4 +19,24 @@ const addCard=(object)=>{
     cards.appendChild(title);
 
 }
-addCard();
+searchInput.addEventListener('input',(e)=>{
+    event.preventDefault();
+     let value =searchInput.value.toLowerCase();
+     search(value);
+
+})
+const search=(arr,name)=>{
+    if (name){
+        let newArr=arr.filter((ele)=>{
+            return ele.name === name;
+        })
+        return newArr;
+    }
+    
+}
+const displayCards=(arr)=>{
+    anemiCards.innerHTML="";
+    arr.forEach(element => {
+        return addCard(element);
+    });
+}
