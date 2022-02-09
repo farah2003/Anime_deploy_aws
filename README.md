@@ -1,1 +1,2 @@
-# anime-project
+# anime Project
+### a single-page website displays some of enimes movies with a search box to find the enimes to display the enime image, trailer video, some facts about this enime and characters quotes.
