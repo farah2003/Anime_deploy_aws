@@ -1,5 +1,5 @@
 const anemiCards= document.querySelector("#anime-cards");
-
+let searchVideo = `<iframe width="560" height="390"src="" allowfullscreen></iframe>`
 ////add cards
 const addCard=(object)=>{
 
@@ -58,6 +58,8 @@ const url3 = "http://serpapi.com/search.json?engine=youtube&search_query="
 const url3Key = "%20official%20trailer&api_key=7150256dff81b2dfc1cb5eb43f317fb47e633d085039f9cded37c6797570c7c2"
 const searchInput = document.querySelector('#searchInput')
 
+const displayContainer = document.getElementById('content');
+let newCont = ``;
 const searchBtn = document.querySelector('#btn')
 searchBtn.addEventListener('click',()=>{
     console.log(searchInput.value)
@@ -68,15 +70,43 @@ searchBtn.addEventListener('click',()=>{
     const inputUrl3 = url3+searchInput.value+url3Key;
     console.log(inputUrl3);
     request(inputUrl2,getFacts);
-    // request(inputUrl3,getVideo);
-    ///////////////////////////////
-    // let testt = `<p>aaaaaaaaaaaaaa</p>`;
-    // document.getElementById('content').innerHTML=testt; 
+    request(inputUrl3,getVideo);
 })
 
+
+
 function getVideo(object){
+    let videoLink = object.video_results[0].link.slice(32,object.video_results[0].link.length);
     console.log(object)
+    console.log(videoLink)
+    searchVideo = `<iframe width="560" height="390"src="https://www.youtube.com/embed/${videoLink}" allowfullscreen></iframe>`
 }
 function getFacts(object){
     console.log(object)
+    let objectImage = object.img
+    console.log("this is object image",objectImage)
+    let facts = object.data
+    console.log("this is facts",facts)
+    
+    newCont = `
+    <section class="result">
+        <div class="img-video">
+          <img
+            src="${objectImage}"
+          />
+          ${searchVideo}
+        </div>
+        <h2>some facts about your anime</h2>
+      </section>`
+      document.getElementById('facts').innerText=``;
+      facts.forEach(ele=>{
+        addFacts(ele)
+      })
+      displayContainer.innerHTML = newCont;
+}
+const addFacts = (facts)=>{
+    const fact = document.createElement('p')
+    fact.innerText = facts.fact
+    console.log(fact)
+    document.getElementById('facts').appendChild(fact);
 }
