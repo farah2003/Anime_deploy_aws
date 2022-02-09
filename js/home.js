@@ -1,4 +1,6 @@
 const anemiCards= document.querySelector("#anime-cards");
+const animeInfo= document.querySelector(".result");
+
 const divFacts= document.getElementById('facts');
 const url="https://anime-facts-rest-api.herokuapp.com/api/v1";
 const factsApi = "https://anime-facts-rest-api.herokuapp.com/api/v1/"
@@ -6,6 +8,8 @@ const videoApi = "http://serpapi.com/search.json?engine=youtube&search_query="
 const videoApiKey = "%20official%20trailer&api_key=7150256dff81b2dfc1cb5eb43f317fb47e633d085039f9cded37c6797570c7c2"
 const searchInput = document.querySelector('#searchInput');
 const searchBtn = document.querySelector('#btn');
+const animeImage=document.querySelector("#animeImage");
+const video=document.querySelector("#video");
 const displayContainer = document.getElementById('content');
 let searchVideo = `<iframe width="560" height="390"src="" allowfullscreen></iframe>`
 let newCont = ``;
@@ -56,14 +60,14 @@ function dispaly(object){
         });
 }
 request(url,dispaly);
-
-////////////////////////////////////////////////////////////
-
 searchBtn.addEventListener('click',()=>{
+
     ///////add the value form search to api
     const inputfactsApi = factsApi+searchInput.value;
     ///// add the value to api video
     const inputvideoApi = videoApi+searchInput.value+videoApiKey;
+    animeInfo.style.display="flex";
+    anemiCards.style.display="none"
 
     request(inputfactsApi,getFacts);
     request(inputvideoApi,getVideo);
@@ -74,36 +78,26 @@ searchBtn.addEventListener('click',()=>{
 function getVideo(object){
     /////get the official trailer link
     let videoLink = object.video_results[0].link.slice(32,object.video_results[0].link.length);
-    searchVideo = `<iframe width="560" height="390"src="https://www.youtube.com/embed/${videoLink}" allowfullscreen></iframe>`
+    let link=`https://www.youtube.com/embed/${videoLink}`;
+    video.src=link;
 }
 /////get data from facts Api
 function getFacts(object){
+    divFacts.innerHTML="";
    let objectImage = object.img
    let arrFacts = object.data
-    ///////disaply date in html
-    newCont = `
-    <section class="result">
-        <div class="img-video">
-          <img
-            src="${objectImage}"
-          />
-          ${searchVideo}
-        </div>
-        <h2>some facts about your anime</h2>
-      </section>`
-        displayContainer.innerHTML = newCont;
-      getObject(arrFacts);
- 
-    
-}
-function getObject(arrFacts){
-    arrFacts.forEach(ele=>{
-        displayFacts(ele)
-      })
-}
+   animeImage.src=objectImage;
+   
+   arrFacts.forEach(ele=>{
+   
+    displayFacts(ele)
+  })
+   }
 
 const displayFacts = (fact)=>{
+ 
     const factParagraph = document.createElement('p');
+
     ////get fact form  factobject
     factParagraph.textContent= fact.fact
     divFacts.appendChild(factParagraph);
