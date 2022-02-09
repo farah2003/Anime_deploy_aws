@@ -121,3 +121,47 @@ body{
       flex-direction: column;
     }
   }
+  .result {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-video {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .result h2 {
+    margin-top: 40px;
+    font-family: "Abril Fatface", cursive;
+    color: #229954;
+  }
+  .img-video img {
+    width: 30%;
+  }
+  .img-video iframe {
+    width: 60%;
+  }
+  #facts {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+  }
+  #facts p {
+    color: #229954;
+    margin-top: 10px;
+    width: 30%;
+    height: 130px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(211, 211, 211);
+    padding: 5px;
+    font-size: 18px;
+  }
+  .footer{
+      height: 40px;
+  }
