@@ -1,6 +1,6 @@
 const anemiCards= document.querySelector("#anime-cards");
 const animeInfo= document.querySelector(".result");
-
+const text= document.getElementById('#text');
 const divFacts= document.getElementById('facts');
 const url="https://anime-facts-rest-api.herokuapp.com/api/v1";
 const factsApi = "https://anime-facts-rest-api.herokuapp.com/api/v1/"
@@ -97,8 +97,11 @@ function getFacts(object){
 const displayFacts = (fact)=>{
  
     const factParagraph = document.createElement('p');
+    const div = document.createElement('div');
 
     ////get fact form  factobject
     factParagraph.textContent= fact.fact
-    divFacts.appendChild(factParagraph);
+    div.appendChild(factParagraph);
+    div.style.backgroundColor="#229954";
+    divFacts.appendChild(div);
 }
