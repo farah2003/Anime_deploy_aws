@@ -62,6 +62,7 @@ body{
 #anime-cards card{
     margin-bottom: 4vh;
     margin-left: 15px;
+    transition: all .1s ease-in-out;
 }
 #anime-cards img{
     width:12vw;
@@ -69,6 +70,13 @@ body{
     border:2px solid #229954;
     border-radius:6px;
     box-shadow: 0 0 9px 0#F0F3F4;
+    
+}
+#anime-cards :hover{
+  width: 13vw;
+  height: 42vh;  
+    transform: scale(1.05); 
+
 }
 #anime-cards h2{
     font-weight: 600;
@@ -76,120 +84,217 @@ body{
     
     
 }
-@media(max-width :700px){
 
-    #anime-cards{
-      
-          display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-          text-align: center;
-          justify-content: center;
 
-      }
-      #header{
-        margin: 3vw 4vw;  
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-     
-    
-    }
-    #search input{
-        padding: 10px;
-      font-size: 17px;
-      border: 1px solid grey;
-      border-radius: 5px;
-    
-      width: 70vw;
-    
-    }
-    #logo{
-        margin-bottom: 2vh;
-        
-    }
-}
-
-@media (max-width: 992px) {
-    #anime-cards{
-        margin:4vw;
-         
-      }
-  }
-@media (min-width: 1200px) {
-    .what-people-say-container {
-      flex-direction: column;
-    }
-  }
-  .result {
-    width: 100%;
-    display:none;
-    flex-direction: column;
-    align-items: center;
-  }
-  .img-video {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .result h2 {
-    margin-top: 40px;
-    font-family: "Abril Fatface", cursive;
-    color: #229954;
-  }
-  .img-video img {
-    width: 30%;
-  }
-  .img-video iframe {
-    width: 60%;
-  }
-  .footer{
-      height: 40px;
-  
-}
-
-#facts{
-  display: flex;
+.result {
+  width: 100%;
+  display:none;
   flex-direction: column;
   align-items: center;
-  
-  
+}
+.img-video {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
+}
+.result h2 {
+  margin-top: 40px;
+  font-family: "Abril Fatface", cursive;
+  color: #229954;
+}
+.img-video img {
+  margin-bottom: 2vh;
+  width: 30%;
+}
+.img-video iframe {
+  width: 60%;
+}
+
+.footer{
+    height: 40px;
+
+}
+
+#qoutes{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
 }
 #facts div{
-  background-color: #D68910;
+background-color: #D68910;
 
+ width:70vw;
+ margin-bottom: 2vh;
+ box-shadow: 4px 2px 9px 2px #CACFD2;
+
+ height: 15vh;
+}
+#facts  div p{
+padding :2% 3%;
+color:#fff;
+line-height: 1.4;
+font-size: 18px;
+}
+
+
+#facts{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
+}
+#qoutes div{
+background-color: #D68910;
+
+ width:70vw;
+ margin-bottom: 2vh;
+ box-shadow: 4px 2px 9px 2px #CACFD2;
+
+ height: 15vh;
+}
+#qoutes  div p{
+padding :2% 3%;
+color:#fff;
+line-height: 1.4;
+font-size: 18px;
+}
+@media(max-width :700px){
+
+   
+  #header{
+    margin: 3vw 4vw;  
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+ 
+
+}
+#search input{
+    padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-radius: 5px;
+
+  width: 70vw;
+
+}
+#logo{
+    margin-bottom: 2vh;
+    
+}
+#anime-cards{
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+#anime-cards img{
+width:65vw;
+
+}
+#anime-cards card{
+
+transition: none;
+}
+
+#anime-cards :hover{
+
+
+transform: scale(0); 
+}
+
+#facts div{
+  background-color: #D68910;
+  
    width:70vw;
    margin-bottom: 2vh;
    box-shadow: 4px 2px 9px 2px #CACFD2;
-}
-#facts  div p{
-  padding :2% 3%;
-  color:#fff;
-  line-height: 1.4;
-  font-size: 18px;
-}
-@media (max-width: 992px) {
-    .img-video{
+  
+   height: 20vh;
+  }
+  #qoutes div{
+    
+     box-shadow: 4px 2px 9px 2px #CACFD2;
+    
+     height: 20vh;
+     align-items: center;
+    }
+    #facts  div p{
+      padding :3% 3%;
+      color:#fff;
+      line-height: 1;
+      font-size: 16px;
+      }
+
+      .img-video{
         flex-direction: column;
         width: 90%;
     }
     .img-video img{
-        width: 50%;
+        width: 60%;
     }
     .img-video iframe {
         width: 100%;
       }
-    #header{
-        margin: 3vw 4vw;
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #logo{
-        margin-bottom: 2vh;
-    }
+
     .facts p{
         width: 98%;
     }
+      
+}
+@media(min-width:700px) and (max-width:1200px){
+  .img-video{
+    flex-direction: column;
+    width: 90%;
+}
+.img-video img{
+    width: 60%;
+}
+.img-video iframe {
+    width: 100%;
+  }
+
+  #anime-cards img{
+    width:20vw;
+    height: 30vh;  
+    border:2px solid #229954;
+    border-radius:6px;
+    box-shadow: 0 0 9px 0#F0F3F4;
+    
+}
+#anime-cards :hover{
+  width: 13vw;
+  height: 42vh;  
+    transform: scale(1.05); 
+
+}
+
+#facts div{
+  background-color: #D68910;
+  
+   width:70vw;
+   margin-bottom: 2vh;
+   box-shadow: 4px 2px 9px 2px #CACFD2;
+  
+   height: 10vh;
+  }
+  #qoutes div{
+    width:70vw;
+     box-shadow: 4px 2px 9px 2px #CACFD2;
+    
+     height: 10vh;
+     align-items: center;
+    }
+    #facts  div p{
+      padding :3% 3%;
+      color:#fff;
+      line-height: 1;
+      font-size: 20px;
+      }
 }

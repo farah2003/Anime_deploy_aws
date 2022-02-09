@@ -2,6 +2,7 @@ const anemiCards= document.querySelector("#anime-cards");
 const animeInfo= document.querySelector(".result");
 const text= document.getElementById('#text');
 const divFacts= document.getElementById('facts');
+const divQoutes= document.getElementById('qoutes');
 const url="https://anime-facts-rest-api.herokuapp.com/api/v1";
 const factsApi = "https://anime-facts-rest-api.herokuapp.com/api/v1/"
 const videoApi = "http://serpapi.com/search.json?engine=youtube&search_query="
@@ -10,9 +11,10 @@ const searchInput = document.querySelector('#searchInput');
 const searchBtn = document.querySelector('#btn');
 const animeImage=document.querySelector("#animeImage");
 const video=document.querySelector("#video");
+const qoutesBtn=document.querySelector("#qoutesSection");
+const factsBtn=document.querySelector("#factSection");
 const displayContainer = document.getElementById('content');
-let searchVideo = `<iframe width="560" height="390"src="" allowfullscreen></iframe>`
-let newCont = ``;
+const qouteApi ='https://animechan.vercel.app/api/quotes/anime?title='
 
 
 /////////request function 
@@ -56,6 +58,7 @@ searchBtn.addEventListener('click',()=>{
     redirect(searchInput.value);
     })
     
+ 
 
 
 ////dispaly data from api in card
@@ -68,14 +71,23 @@ function dispaly(object){
 function redirect (value){
      ///////add the value form search to api
     const inputfactsApi = factsApi+value;
+    let newValue= toConvertName(value)
+    const inputQouteApi=qouteApi+newValue;
+    console.log("nammeme",inputQouteApi);
        ///// add the value to api video
     const inputvideoApi = videoApi+value+videoApiKey;
       animeInfo.style.display="flex";
     anemiCards.style.display="none"
 
-    request(inputfactsApi,getFacts);
-    request(inputvideoApi,getVideo);
+   request(inputfactsApi,getFacts);
+   request(inputvideoApi,getVideo);
+    request(inputQouteApi,getQuotes);
 }
+const toConvertName = (name)=>{
+    let newName = name.split('_')[0];
+
+    return newName;
+  }
 
 
 
@@ -98,6 +110,14 @@ function getFacts(object){
     displayFacts(ele)
   })
    }
+function getQuotes(qoutesArr){
+    qoutesArr.forEach(ele=>{
+        displayQoutes(ele);
+       
+      })    
+    
+ 
+}
 
 const displayFacts = (fact)=>{
  
@@ -109,5 +129,18 @@ const displayFacts = (fact)=>{
     div.appendChild(factParagraph);
     div.style.backgroundColor="#229954";
     divFacts.appendChild(div);
+}
+
+const displayQoutes = (qoute)=>{
+   /* console.log(ele["character"],ele["quote"]);
+    console.log();*/
+    const factParagraph = document.createElement('p');
+    const div = document.createElement('div');
+
+    ////get fact form  factobject
+    factParagraph.textContent= qoute.quote;
+    div.appendChild(factParagraph);
+    div.style.backgroundColor="#229954";
+    divQoutes.appendChild(div);
 }
 request(url,dispaly);
