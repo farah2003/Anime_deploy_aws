@@ -1,94 +1,80 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Syne+Tactile&display=swap');
-*{
-    padding:0;
-    margin:0;
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Syne+Tactile&display=swap");
+* {
+  padding: 0;
+  margin: 0;
 }
-body{
-    background-color: #ECF0F1 ;
+body {
+  background-color: #ecf0f1;
 }
-#logo{
-    margin: 0 3vw;
-    font-family: 'Abril Fatface', cursive;
-    font-size: 1.3rem;
-    color: #229954;
+#logo {
+  margin: 0 3vw;
+  font-family: "Abril Fatface", cursive;
+  font-size: 1.3rem;
+  color: #229954;
 }
-#search input{
-    padding: 10px;
+#search input {
+  padding: 10px;
   font-size: 17px;
   border: 1px solid grey;
   border-radius: 5px;
 
   width: 30vw;
-
 }
 
 #search button {
-   
-   
-    padding: 10px;
-    background:#229954;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-   
-    border-radius: 5px;
-  }
+  padding: 10px;
+  background: #229954;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
 
-#header{
-    margin: 3vw 4vw;  
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  border-radius: 5px;
+}
 
+#header {
+  margin: 3vw 4vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-#content{
-    margin:2vw 4vw;
-    
+#content {
+  margin: 2vw 4vw;
 }
-#cotentText{
-    margin-bottom: 1vh;
+#cotentText {
+  margin-bottom: 1vh;
 }
-#anime-cards{
- 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-    
- 
+#anime-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
 }
-#anime-cards card{
-    margin-bottom: 4vh;
-    margin-left: 15px;
-    transition: all .1s ease-in-out;
+#anime-cards card {
+  margin-bottom: 4vh;
+  margin-left: 15px;
+  transition: all 0.1s ease-in-out;
 }
-#anime-cards img{
-    width:12vw;
-    height: 40vh;  
-    border:2px solid #229954;
-    border-radius:6px;
-    box-shadow: 0 0 9px 0#F0F3F4;
-    
+#anime-cards img {
+  width: 12vw;
+  height: 40vh;
+  border: 2px solid #229954;
+  border-radius: 6px;
+  box-shadow: 0 0 9px 0#F0F3F4;
 }
-#anime-cards :hover{
+#anime-cards :hover {
   width: 13vw;
-  height: 42vh;  
-    transform: scale(1.05); 
-
+  height: 42vh;
+  transform: scale(1.05);
 }
-#anime-cards h2{
-    font-weight: 600;
-    font-size: 1rem;
-    
-    
+#anime-cards h2 {
+  font-weight: 600;
+  font-size: 1rem;
 }
-
 
 .result {
   width: 100%;
-  display:none;
+  display: none;
   flex-direction: column;
   align-items: center;
 }
@@ -97,7 +83,6 @@ body{
   display: flex;
   justify-content: space-around;
   align-items: center;
- 
 }
 .result h2 {
   margin-top: 40px;
@@ -112,189 +97,166 @@ body{
   width: 60%;
 }
 
-.footer{
-    height: 40px;
-
+.footer {
+  height: 40px;
 }
 
-#qoutes{
-display: flex;
-flex-direction: column;
-align-items: center;
-
-
-}
-#facts div{
-background-color: #D68910;
-
- width:70vw;
- margin-bottom: 2vh;
- box-shadow: 4px 2px 9px 2px #CACFD2;
-
- height: 15vh;
-}
-#facts  div p{
-padding :2% 3%;
-color:#fff;
-line-height: 1.4;
-font-size: 18px;
-}
-
-
-#facts{
-display: flex;
-flex-direction: column;
-align-items: center;
-
-
-}
-#qoutes div{
-background-color: #D68910;
-
- width:70vw;
- margin-bottom: 2vh;
- box-shadow: 4px 2px 9px 2px #CACFD2;
-
- height: 15vh;
-}
-#qoutes  div p{
-padding :2% 3%;
-color:#fff;
-line-height: 1.4;
-font-size: 18px;
-}
-@media(max-width :700px){
-
-   
-  #header{
-    margin: 3vw 4vw;  
-    display:flex;
-    flex-direction: column;
-    align-items: center;
- 
-
-}
-#search input{
-    padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-radius: 5px;
-
-  width: 70vw;
-
-}
-#logo{
-    margin-bottom: 2vh;
-    
-}
-#anime-cards{
-
+#qoutes {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-
+  align-items: center;
 }
-#anime-cards img{
-width:65vw;
+#facts div {
+  background-color: #d68910;
 
+  width: 70vw;
+  margin-bottom: 2vh;
+  box-shadow: 4px 2px 9px 2px #cacfd2;
+
+  height: 15vh;
 }
-#anime-cards card{
-
-transition: none;
+#facts div p {
+  padding: 2% 3%;
+  color: #fff;
+  line-height: 1.4;
+  font-size: 18px;
 }
 
-#anime-cards :hover{
-
-
-transform: scale(0); 
+#facts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+#qoutes div {
+  background-color: #d68910;
 
-#facts div{
-  background-color: #D68910;
-  
-   width:70vw;
-   margin-bottom: 2vh;
-   box-shadow: 4px 2px 9px 2px #CACFD2;
-  
-   height: 20vh;
+  width: 70vw;
+  margin-bottom: 2vh;
+  box-shadow: 4px 2px 9px 2px #cacfd2;
+
+  height: 15vh;
+}
+#qoutes div p {
+  padding: 2% 3%;
+  color: #fff;
+  line-height: 1.4;
+  font-size: 18px;
+}
+@media (max-width: 700px) {
+  #header {
+    margin: 3vw 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  #qoutes div{
-    
-     box-shadow: 4px 2px 9px 2px #CACFD2;
-    
-     height: 20vh;
-     align-items: center;
-    }
-    #facts  div p{
-      padding :3% 3%;
-      color:#fff;
-      line-height: 1;
-      font-size: 16px;
-      }
+  #search input {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 70vw;
+  }
+  #logo {
+    margin-bottom: 2vh;
+  }
+  #anime-cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  #anime-cards img {
+    width: 65vw;
+  }
+  #anime-cards card {
+    transition: none;
+  }
 
-      .img-video{
-        flex-direction: column;
-        width: 90%;
-    }
-    .img-video img{
-        width: 60%;
-    }
-    .img-video iframe {
-        width: 100%;
-      }
+  #anime-cards :hover {
+    transform: scale(0);
+  }
 
-    .facts p{
-        width: 98%;
-    }
-      
-}
-@media(min-width:700px) and (max-width:1200px){
-  .img-video{
+  #facts div {
+    background-color: #d68910;
+
+    width: 70vw;
+    margin-bottom: 2vh;
+    box-shadow: 4px 2px 9px 2px #cacfd2;
+
+    height: 20vh;
+  }
+  #qoutes div {
+    box-shadow: 4px 2px 9px 2px #cacfd2;
+
+    height: 20vh;
+    align-items: center;
+  }
+  #facts div p {
+    padding: 3% 3%;
+    color: #fff;
+    line-height: 1;
+    font-size: 16px;
+  }
+
+  .img-video {
     flex-direction: column;
     width: 90%;
-}
-.img-video img{
+  }
+  .img-video img {
     width: 60%;
-}
-.img-video iframe {
+  }
+  .img-video iframe {
     width: 100%;
   }
 
-  #anime-cards img{
-    width:20vw;
-    height: 30vh;  
-    border:2px solid #229954;
-    border-radius:6px;
-    box-shadow: 0 0 9px 0#F0F3F4;
-    
-}
-#anime-cards :hover{
-  width: 13vw;
-  height: 42vh;  
-    transform: scale(1.05); 
-
-}
-
-#facts div{
-  background-color: #D68910;
-  
-   width:70vw;
-   margin-bottom: 2vh;
-   box-shadow: 4px 2px 9px 2px #CACFD2;
-  
-   height: 10vh;
+  .facts p {
+    width: 98%;
   }
-  #qoutes div{
-    width:70vw;
-     box-shadow: 4px 2px 9px 2px #CACFD2;
-    
-     height: 10vh;
-     align-items: center;
-    }
-    #facts  div p{
-      padding :3% 3%;
-      color:#fff;
-      line-height: 1;
-      font-size: 20px;
-      }
+}
+@media (min-width: 700px) and (max-width: 1200px) {
+  .img-video {
+    flex-direction: column;
+    width: 90%;
+  }
+  .img-video img {
+    width: 60%;
+  }
+  .img-video iframe {
+    width: 100%;
+  }
+
+  #anime-cards img {
+    width: 20vw;
+    height: 30vh;
+    border: 2px solid #229954;
+    border-radius: 6px;
+    box-shadow: 0 0 9px 0#F0F3F4;
+  }
+  #anime-cards :hover {
+    width: 13vw;
+    height: 42vh;
+    transform: scale(1.05);
+  }
+
+  #facts div {
+    background-color: #d68910;
+
+    width: 70vw;
+    margin-bottom: 2vh;
+    box-shadow: 4px 2px 9px 2px #cacfd2;
+
+    height: 10vh;
+  }
+  #qoutes div {
+    width: 70vw;
+    box-shadow: 4px 2px 9px 2px #cacfd2;
+
+    height: 10vh;
+    align-items: center;
+  }
+  #facts div p {
+    padding: 3% 3%;
+    color: #fff;
+    line-height: 1;
+    font-size: 20px;
+  }
 }
