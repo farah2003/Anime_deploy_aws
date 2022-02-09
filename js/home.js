@@ -48,8 +48,14 @@ const addCard=(object)=>{
     title.textContent=object.anime_name;
     console.log(object.anime_name);
     card.appendChild(title);
+    card.addEventListener('click',()=>{
+     redirect(title.textContent);        
+        })
 }
-
+searchBtn.addEventListener('click',()=>{
+    redirect(searchInput.value);
+    })
+    
 
 
 ////dispaly data from api in card
@@ -59,19 +65,18 @@ function dispaly(object){
      addCard(element);
         });
 }
-request(url,dispaly);
-searchBtn.addEventListener('click',()=>{
-
-    ///////add the value form search to api
-    const inputfactsApi = factsApi+searchInput.value;
-    ///// add the value to api video
-    const inputvideoApi = videoApi+searchInput.value+videoApiKey;
-    animeInfo.style.display="flex";
+function redirect (value){
+     ///////add the value form search to api
+    const inputfactsApi = factsApi+value;
+       ///// add the value to api video
+    const inputvideoApi = videoApi+value+videoApiKey;
+      animeInfo.style.display="flex";
     anemiCards.style.display="none"
 
     request(inputfactsApi,getFacts);
     request(inputvideoApi,getVideo);
-})
+}
+
 
 
 
@@ -105,3 +110,4 @@ const displayFacts = (fact)=>{
     div.style.backgroundColor="#229954";
     divFacts.appendChild(div);
 }
+request(url,dispaly);
