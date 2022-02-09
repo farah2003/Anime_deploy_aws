@@ -10,7 +10,7 @@
 
 ## Links
 
-- [Live Demo](https://github.com/GSG-G11/anime-project);
+- [Live Demo](https://gsg-g11.github.io/anime-project/)
 
 ## Purpose
 build a website that views information about anime series and the facts about anime and characters, anime quotes 
@@ -22,7 +22,7 @@ build a website that views information about anime series and the facts about an
 - [Live Demo](https://GSG-G11.github.io/Fantastic-Four) 
 
 ## Purpose
-build a  single-page website that displays information about anime series and the facts about anime and characters, anime quotes 
+build a  single-page website that displays information about anime series and the facts about anime and characters, anime quotes .
 
 
 ## User Stories 
