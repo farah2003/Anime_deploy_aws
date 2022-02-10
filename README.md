@@ -17,10 +17,6 @@ build a website that views information about anime series and the facts about an
 
 - [Api](#Api)
 
-## Links
-
-- [Live Demo](https://GSG-G11.github.io/Fantastic-Four) 
-
 ## Purpose
 build a  single-page website that displays information about anime series and the facts about anime and characters, anime quotes .
 
