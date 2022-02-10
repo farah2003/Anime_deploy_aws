@@ -15,6 +15,7 @@ const video = document.querySelector("#video");
 const qoutesBtn = document.querySelector("#qoutesSection");
 const factsBtn = document.querySelector("#factSection");
 const displayContainer = document.getElementById("content");
+const divNotFound =document.querySelector(".notFound")
 const qouteApi = "https://animechan.vercel.app/api/quotes/anime?title=";
 
 /////////request function
@@ -22,14 +23,27 @@ function request(url, cb) {
   const xhr = new XMLHttpRequest();
 
   xhr.onreadystatechange = function () {
-    if (xhr.status === 200 && xhr.readyState === 4) {
-      const object = JSON.parse(xhr.responseText);
-      cb(object);
+    if (xhr.status === 200) {
+      if(xhr.readyState === 4){
+        const object = JSON.parse(xhr.responseText);
+        cb(object);
+      }
+     
     }
-  };
+    else if (xhr.status ===404){
+      notFound();
+    }
+   
+  }
 
   xhr.open("GET", url, true);
   xhr.send();
+}
+////
+function notFound(){
+  divNotFound.style.display="flex";
+  animeInfo.style.display = "none";
+  anemiCards.style.display = "none";
 }
 
 ////add cards
@@ -74,6 +88,7 @@ function redirect(value) {
   const inputvideoApi = videoApi + value + videoApiKey;
   animeInfo.style.display = "flex";
   anemiCards.style.display = "none";
+  divNotFound.style.display="none";
 
   request(inputfactsApi, getFacts);
   request(inputvideoApi, getVideo);
