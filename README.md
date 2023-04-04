@@ -56,4 +56,3 @@ https://animechan.vercel.app/api/quotes/character?name=luffy
 ## Team Members 
 - Farah Shaqoura
 - Abdallah Rabah
-
